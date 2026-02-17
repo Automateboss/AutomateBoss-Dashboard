@@ -60,11 +60,11 @@ export default async function ClientsPage() {
             <div className="flex items-end justify-between">
                 <div className="space-y-1">
                     <h1 className="text-4xl font-black tracking-tighter text-primary uppercase leading-none">CLIENT PORTFOLIO</h1>
-                    <p className="text-muted-foreground font-medium tracking-wide uppercase text-xs">
+                    <p className="text-muted-foreground font-medium tracking-wide uppercase text-sm">
                         Organization Management & CRM Oversight
                     </p>
                 </div>
-                <Button className="font-black uppercase tracking-widest text-xs h-10 px-6 gap-2">
+                <Button className="font-black uppercase tracking-widest text-sm h-10 px-6 gap-2">
                     <PlusCircle className="h-4 w-4" />
                     Onboard New Client
                 </Button>
