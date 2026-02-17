@@ -1,4 +1,5 @@
 import { getPipelineProjects } from '@/app/actions/admin'
+export const dynamic = 'force-dynamic'
 import { PipelineKanban } from '@/components/admin/PipelineKanban'
 import { PipelineListView } from '@/components/admin/PipelineListView'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'

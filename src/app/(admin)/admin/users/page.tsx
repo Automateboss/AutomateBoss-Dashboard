@@ -1,4 +1,5 @@
 import { getUsers } from '@/app/actions/admin-users'
+export const dynamic = 'force-dynamic'
 import { ManagementTable } from '@/components/admin/ManagementTable'
 import { SpecializationManager } from '@/components/admin/SpecializationManager'
 import { InviteUserModal } from '@/components/admin/InviteUserModal'

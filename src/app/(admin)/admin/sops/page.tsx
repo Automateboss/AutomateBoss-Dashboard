@@ -1,4 +1,5 @@
 import { getSOPs } from '@/app/actions/admin-sops'
+export const dynamic = 'force-dynamic'
 import { ManagementTable } from '@/components/admin/ManagementTable'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'

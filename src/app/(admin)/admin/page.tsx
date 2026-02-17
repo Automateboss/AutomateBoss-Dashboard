@@ -1,4 +1,5 @@
 import { getAdminStats, getGlobalActivity } from '@/app/actions/admin'
+export const dynamic = 'force-dynamic'
 import { AdminStatCard } from '@/components/admin/AdminStatCard'
 import { Badge } from '@/components/ui/badge'
 import { Clock, User, Building2 } from 'lucide-react'

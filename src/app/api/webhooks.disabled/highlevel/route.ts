@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { handleHighLevelWebhook } from '@/app/actions/integrations'
+// import { handleHighLevelWebhook } from '@/app/actions/integrations.disabled'
+// NOTE: This route is disabled temporarily
 
 export async function POST(req: NextRequest) {
     try {
@@ -13,13 +14,15 @@ export async function POST(req: NextRequest) {
         }
         */
 
-        const result = await handleHighLevelWebhook(payload)
+        // const result = await handleHighLevelWebhook(payload)
 
-        if (result.success) {
-            return NextResponse.json({ message: 'Webhook processed successfully' })
-        } else {
-            return NextResponse.json({ error: result.error }, { status: 500 })
-        }
+        // if (result.success) {
+        //     return NextResponse.json({ message: 'Webhook processed successfully' })
+        // } else {
+        //     return NextResponse.json({ error: result.error }, { status: 500 })
+        // }
+        
+        return NextResponse.json({ error: 'Webhook temporarily disabled' }, { status: 503 })
     } catch (error) {
         console.error('Webhook error:', error)
         return NextResponse.json({ error: 'Invalid payload' }, { status: 400 })
