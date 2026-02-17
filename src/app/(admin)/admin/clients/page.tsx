@@ -25,7 +25,7 @@ export default async function ClientsPage() {
         {
             header: 'Location ID',
             accessor: (client: any) => (
-                <div className="flex items-center gap-2 text-xs font-bold text-muted-foreground uppercase">
+                <div className="flex items-center gap-2 text-sm font-bold text-muted-foreground uppercase">
                     <Globe className="h-3 w-3" />
                     {client.highlevel_location_id || 'NOT LINKED'}
                 </div>
@@ -38,7 +38,7 @@ export default async function ClientsPage() {
         {
             header: 'Created At',
             accessor: (client: any) => (
-                <div className="flex items-center gap-2 text-xs font-bold text-muted-foreground uppercase">
+                <div className="flex items-center gap-2 text-sm font-bold text-muted-foreground uppercase">
                     <Calendar className="h-3 w-3" />
                     {new Date(client.created_at).toLocaleDateString()}
                 </div>
