@@ -1,25 +1,9 @@
 import { createClient } from '@supabase/supabase-js'
 
-let supabaseAdminInstance: ReturnType<typeof createClient> | null = null
+// Only initialize if env vars are present (runtime only, not build time)
+const url = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
+const key = process.env.SUPABASE_SERVICE_ROLE_KEY || ''
 
-function getSupabaseAdmin() {
-    if (!supabaseAdminInstance) {
-        const url = process.env.NEXT_PUBLIC_SUPABASE_URL
-        const key = process.env.SUPABASE_SERVICE_ROLE_KEY
-        
-        if (!url || !key) {
-            throw new Error('Missing Supabase environment variables')
-        }
-        
-        supabaseAdminInstance = createClient(url, key)
-    }
-    return supabaseAdminInstance
-}
-
-// Export as property getter so it's lazy but transparent
-export const supabaseAdmin = new Proxy({} as ReturnType<typeof createClient>, {
-    get: (_, prop) => {
-        const client = getSupabaseAdmin()
-        return (client as any)[prop]
-    }
-})
+export const supabaseAdmin = url && key 
+    ? createClient(url, key)
+    : createClient('https://placeholder.supabase.co', 'placeholder-key')
