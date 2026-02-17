@@ -130,12 +130,12 @@ export function TaskDetailView({ item, onClose }: TaskDetailViewProps) {
                                                 </p>
                                                 <div className="flex items-center gap-2 pt-1">
                                                     {progress.step.loom_video_url && (
-                                                        <Button size="xs" variant="secondary" className="h-7 text-[9px] font-black uppercase" onClick={() => window.open(progress.step.loom_video_url, '_blank')}>
+                                                        <Button size="sm" variant="secondary" className="h-7 text-[9px] font-black uppercase" onClick={() => window.open(progress.step.loom_video_url, '_blank')}>
                                                             <Play className="h-3 w-3 mr-1" /> Watch Loom
                                                         </Button>
                                                     )}
                                                     {progress.step.google_doc_url && (
-                                                        <Button size="xs" variant="outline" className="h-7 text-[9px] font-black uppercase" onClick={() => window.open(progress.step.google_doc_url, '_blank')}>
+                                                        <Button size="sm" variant="outline" className="h-7 text-[9px] font-black uppercase" onClick={() => window.open(progress.step.google_doc_url, '_blank')}>
                                                             <ExternalLink className="h-3 w-3 mr-1" /> View SOP
                                                         </Button>
                                                     )}

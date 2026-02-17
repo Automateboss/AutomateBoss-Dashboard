@@ -58,7 +58,7 @@ export default async function SOPsPage() {
         {
             header: 'Actions',
             accessor: (sop: any) => (
-                <Button variant="ghost" size="xs" className="text-[10px] font-black uppercase tracking-widest text-primary/60 hover:text-primary hover:bg-primary/5">
+                <Button variant="ghost" size="sm" className="text-[10px] font-black uppercase tracking-widest text-primary/60 hover:text-primary hover:bg-primary/5">
                     Edit Procedure
                 </Button>
             ),

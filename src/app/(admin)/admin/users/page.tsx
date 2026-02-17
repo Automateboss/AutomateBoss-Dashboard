@@ -81,7 +81,7 @@ export default async function UsersPage() {
         {
             header: 'Actions',
             accessor: (user: any) => (
-                <Button variant="ghost" size="xs" className="text-[10px] font-black uppercase tracking-widest text-primary/60 hover:text-primary hover:bg-primary/5">
+                <Button variant="ghost" size="sm" className="text-[10px] font-black uppercase tracking-widest text-primary/60 hover:text-primary hover:bg-primary/5">
                     Modify Permissions
                 </Button>
             ),
