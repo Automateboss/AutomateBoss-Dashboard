@@ -5,7 +5,7 @@ export const maxDuration = 60 // Vercel Pro allows up to 60s
 
 // API Configuration
 const STRIPE_KEY = process.env.STRIPE_SECRET_KEY || ''
-const HL_LOCATION_TOKEN = process.env.HL_LOCATION_PRIVATE_TOKEN || ''
+const HL_LOCATION_TOKEN = process.env.HL_LOCATION_TOKEN || process.env.HL_LOCATION_PRIVATE_TOKEN || ''
 const HL_AGENCY_KEY = process.env.HL_AGENCY_KEY || ''
 const HL_MAIN_LOC = process.env.HL_MAIN_LOCATION_ID || 'xEkZMCqlbJEyDFqM2g7z'
 
