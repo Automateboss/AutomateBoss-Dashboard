@@ -1,5 +1,9 @@
 export default async function Home() {
-  const data = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/dashboard`, {
+  // Use VERCEL_URL in production, localhost in dev
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 
+    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
+  
+  const data = await fetch(`${baseUrl}/api/dashboard`, {
     cache: 'no-store'
   }).then(r => r.json()).catch(() => ({ error: 'Loading...' }))
 
