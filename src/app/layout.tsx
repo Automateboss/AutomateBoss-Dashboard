@@ -1,6 +1,9 @@
-export const metadata = {
-  title: 'AutomateBoss Dashboard',
-  description: 'Business metrics and customer management',
+import type { Metadata } from 'next'
+import './globals.css'
+
+export const metadata: Metadata = {
+  title: 'AutomateBoss Command Center',
+  description: 'Real-time business operations dashboard',
 }
 
 export default function RootLayout({
@@ -10,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body style={{ margin: 0, padding: 0 }}>{children}</body>
+      <body className="antialiased">{children}</body>
     </html>
   )
 }
